@@ -62,7 +62,13 @@ N: Explanation why using mockig database for CI is not such a good idea. It migh
 
 https://academy.zerotomastery.io/courses/1206554/lectures/33053527
 
-# Populating database for Continuos Integration
+I had a bug that took me like one hour to find it, it ws here because all was in one line instead of two lines:
+with:
+mongodb-version: ${{ matrix.mongodb-version }}
+
+Solved this issue. MongoDB works fine but I got an error in the in testing posting new launch coz it doe not match any planet. This is solved in next lesson
+
+# Lesson 14. Populating database for Continuos Integration
 
 https://academy.zerotomastery.io/courses/1206554/lectures/33053527
 
@@ -72,3 +78,10 @@ https://github.com/marketplace/actions/mongodb-in-github-actions
               - name: MongoDB in GitHub Actions
                 uses: supercharge/mongodb-github-action@1.10.0
 
+the bug is coz the testing file has no access to planet.model we need to add that manually. src/routes/launches/launches.test.js:
+const { loadPlanetsData } = require('../../models/planets.model');
+
+    beforeAll(async ()=>{
+        await mongoConnect();
+        await loadPlanetsData();
+    });

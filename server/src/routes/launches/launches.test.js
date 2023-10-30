@@ -4,10 +4,12 @@ const {
     mongoConnect,
     mongoDisconnect,
 } = require('../../services/mongo');
+const { loadPlanetsData } = require('../../models/planets.model');
 
 describe('Launches API', ()=>{
     beforeAll(async ()=>{
         await mongoConnect();
+        await loadPlanetsData();
     });
     afterAll(async ()=>{
         await mongoDisconnect();
@@ -54,7 +56,7 @@ describe('Launches API', ()=>{
 
             expect(responseDate).toBe(requestDate);
 
-        expect(response.body).toMatchObject(launchDataWithoutDate);
+            expect(response.body).toMatchObject(launchDataWithoutDate);
         });
 
         test('It should catch invalid required properties', async ()=>{
