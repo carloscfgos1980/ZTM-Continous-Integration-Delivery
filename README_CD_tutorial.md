@@ -49,3 +49,26 @@ https://github.com/marketplace?type=actions
 # Lesson 11. Continuos integration pipeline
 
 https://academy.zerotomastery.io/courses/1206554/lectures/33045698
+
+N: At this point at get ann eror coz MONGO_URL is not available in the github repository since it is storaged in .env which is not loaded to the repository
+
+# Lesson 12. Mocking Databases
+
+https://academy.zerotomastery.io/courses/1206554/lectures/33045701
+
+N: Explanation why using mockig database for CI is not such a good idea. It might introduce new bugs
+
+# Lesson 13. Database with Contibous integration
+
+https://academy.zerotomastery.io/courses/1206554/lectures/33053527
+
+# Populating database for Continuos Integration
+
+https://academy.zerotomastery.io/courses/1206554/lectures/33053527
+
+Reppsitory for the actions in test CI
+https://github.com/marketplace/actions/mongodb-in-github-actions
+
+              - name: MongoDB in GitHub Actions
+                uses: supercharge/mongodb-github-action@1.10.0
+
