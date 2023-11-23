@@ -88,3 +88,5 @@ const { loadPlanetsData } = require('../../models/planets.model');
 
 2. Second bug. Error by texting frontend. We have no test planned and it is expecting none so we need to make some changes in the package.json in the client (frontend):
    "test": "react-scripts test --passWithNoTests",
+
+checking github
