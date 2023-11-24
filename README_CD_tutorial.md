@@ -28,6 +28,9 @@ https://academy.zerotomastery.io/courses/1206554/lectures/32983986
 
 https://academy.zerotomastery.io/courses/1206554/lectures/32983987
 
+Go to our own repository and check for actions
+. Follow in intructions to get a workflow are built. This course will teach how to build it from scratch to have a better understanding of the process
+
 # Lesson 8. Continuos Integratin pipelines
 
 https://academy.zerotomastery.io/courses/1206554/lectures/32983988
@@ -89,4 +92,4 @@ const { loadPlanetsData } = require('../../models/planets.model');
 2. Second bug. Error by texting frontend. We have no test planned and it is expecting none so we need to make some changes in the package.json in the client (frontend):
    "test": "react-scripts test --passWithNoTests",
 
-checking github
+N: Build a pipeline CI/CD gives us the confidence that our code is correct and ready to deploy. It is necessary checking that avoid issues later.
