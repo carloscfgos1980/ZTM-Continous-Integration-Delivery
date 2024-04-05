@@ -69,13 +69,13 @@ I had a bug that took me like one hour to find it, it ws here because all was in
 with:
 mongodb-version: ${{ matrix.mongodb-version }}
 
-Solved this issue. MongoDB works fine but I got an error in the in testing posting new launch coz it doe not match any planet. This is solved in next lesson
+Solved this issue. MongoDB works fine but I got an error in the in testing posting new launch coz it does not match any planet. This is solved in next lesson
 
 # Lesson 14. Populating database for Continuos Integration
 
 https://academy.zerotomastery.io/courses/1206554/lectures/33053527
 
-Reppsitory for the actions in test CI
+Repository for the actions in test CI
 https://github.com/marketplace/actions/mongodb-in-github-actions
 
               - name: MongoDB in GitHub Actions

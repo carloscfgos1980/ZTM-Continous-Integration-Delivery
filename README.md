@@ -1,44 +1,48 @@
-## Testing APIs
+## Full stack app Nasa project
 
-- All the codes comes from NASA project
+- Client was given by the course nevertheless I had to make some adjustments related to the fetching.
+- Backend (Express):
 
-# Lesson 1. Testing in Node
+1. Download CSV file from the Nasa website, storage in my app and use builtin node functions to emit and listen to events in order to read this file using stream method cos it is a very large file. I filtered out the data I needed (just the name of the habitable planets). This data is saved in a mongoDB and is query by using planets endpoint. This plantes are displayed as a drop down by the client.
+2. Implentent a sencod endpoint (launches) in order to schedule new missions and saved into nasa-api database in mongoDB.
+3. Serve the client from the server
+4. Testing at API layer level suing Jest and supertest packages
+5. Improve performance by using MP2 that icludes the cluster mode and Robin-Round approach
+6. Fetch Data from SpaceX API and storage in our launches colletion
+7. Versioning, paginating and sorting paginated data.
 
-https://academy.zerotomastery.io/courses/1206554/lectures/31987559
+- Continous-Integration-Delivery into this repository to check for errors
+- Create an image in Docker
+- Upload the app. Set in production with AWS. This is the website:
 
-# Lesson 2. Testing APIs with Jest
+http://16.16.201.72:8000/
 
-https://academy.zerotomastery.io/courses/1206554/lectures/31987560
+- This course also includes other features:
 
-- Test runner
-- Test fixtures
-- Assertions
-- Mocking
+**Extra Bonus**
 
-* Install Jest npm package for testing. It is a development dependency coz we use the test during development, we dont need to test out test during production
-  cd server
-  npm install jest --save-dev
+# Security-authentification
 
-  "scripts": {
-  "test": "jest",
-  "test-watch": "jest --watch",
-  "watch": "nodemon src/server.js",
-  "start": "node src/server.js"
-  },
+https://github.com/carloscfgos1980/ZTM-Security-authentification.git
 
-# Lesson 3. Testing APIs endpoints with supertest. Get
+# GraphQL
 
-https://academy.zerotomastery.io/courses/1206554/lectures/31988379
+https://github.com/carloscfgos1980/ZTM-GraphQL.git
 
-cd server
-npm install supertest --save-dev
+# Sockets
 
-N: I have a bug when testing GET and trying to validate 'Content-Type', /json/.
+https://github.com/carloscfgos1980/ZTM-Sockets.git
 
-# Lesson 4. Testing APIs endpoints with supertest. POST
+**The whole course could be found here:**
 
-https://academy.zerotomastery.io/courses/1206554/lectures/31996284
+https://github.com/carloscfgos1980/ZTM-Complete_Node_Course.git
 
-# Lesson 5. Testing APIs endpoints with supertest. POST error cases
+**I have also done other courses beside Nodejs that could be a plus**
 
-https://academy.zerotomastery.io/courses/1206554/lectures/31996285
+# SQL-course
+
+https://github.com/carloscfgos1980/ZTM-SQL-course.git
+
+# System_Design_Architecture
+
+https://github.com/carloscfgos1980/ZTM-System_Design_Architecture.git
